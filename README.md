@@ -71,12 +71,12 @@ Add your own OpenAI API key in a .env file:
 OPENAI_API_KEY_UNI=your_api_key_here
 ```
 
-## Notes
+## ✒️ Notes
 
 * Make sure to customise the configs (first few rows) of the python scripts to you liking / usecase.
 
 
-## Images
+## 🖼️ Images
 
 This is what your Graph could look like:
 
