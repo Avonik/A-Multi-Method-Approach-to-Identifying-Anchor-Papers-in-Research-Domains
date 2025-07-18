@@ -12,7 +12,7 @@ The goal is to collect, analyze, and score research papers based on citation str
 | File | Purpose |
 |------|---------|
 | `GrabPapersAndData_Multithread.py` | Downloads papers and metadata from OpenAlex, fetches PDFs via OpenAlex / arXiv / Unpaywall. |
-| `FullQualityRatingUsingOpenAI.py` | Assigns quality scores to papers using LLMs based on venue, type, and whether it's a survey. |
+| `FullQualityRatingUsingOpenAI.py` | Assigns quality scores to papers using LLMs based on metadata. |
 | `FullContentAnalysis.py` | Analyzes citation contexts using LLMs to infer the functional role (impact score) of cited papers. |
 | `networkExportForGephi.py` | Exports citation graph (with weights and attributes) as GEXF for use in Gephi. |
 | `LinearReg-WithConfInt.py` | Trains a regression model with confidence intervals for feature interpretation. |
@@ -28,11 +28,11 @@ The pipeline consists of 5 steps:
 1. **Paper Collection**
    - Run `GrabPapersAndData_Multithread.py`
    - Downloads metadata and PDFs (if available) for all papers in the selected OpenAlex concept.
-   - Scripit will return a folder full with PDFs and a metadata csv.
+   - Script will return a folder full with PDFs and a metadata csv.
 
 2. **Quality Rating**
    - Run `FullQualityRatingUsingOpenAI.py`
-   - Uses OpenAI’s LLM to score papers based on venue, type, and whether they are surveys.
+   - Uses OpenAI’s LLM to score papers based on metadata.
    - Returns a new csv.
 
 3. **Citation Context Analysis**
@@ -42,8 +42,8 @@ The pipeline consists of 5 steps:
    
 4. **Network Export**
    - Run `networkExportForGephi.py`
-   - Takes csvs from step 2 and 3 and generates a GEXF network for further visual and analysis in [Gephi](https://gephi.org/).
-   - You can now calculate network metriks in Gephi.
+   - Takes csvs from step 2 and 3 and generates a GEXF network for further visualisation and analysis in [Gephi](https://gephi.org/).
+   - You can now calculate network metrics in Gephi.
 
 5. **Model Training**
    - Export csv with full network metrics calculated in Gephi (sample provided in repo)
