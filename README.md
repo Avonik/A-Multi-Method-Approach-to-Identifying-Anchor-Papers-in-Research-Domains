@@ -7,7 +7,8 @@ The goal is to collect, analyze, and score research papers based on citation str
 
 ---
 
-## 📦 Repository Structure
+## 📦 Repository Structure 
+
 
 | File | Purpose |
 |------|---------|
@@ -73,3 +74,14 @@ OPENAI_API_KEY_UNI=your_api_key_here
 ## Notes
 
 * Make sure to customise the configs (first few rows) of the python scripts to you liking / usecase.
+
+
+## Images
+
+This is what your Graph could look like:
+
+<img width="1469" height="849" alt="Zitationsgraph" src="https://github.com/user-attachments/assets/37884cb2-464f-4a51-8447-85ae2bc7c1f9" />
+
+<img width="1468" height="853" alt="Zitationsgraph2" src="https://github.com/user-attachments/assets/0c8bcb91-54d9-4e05-8637-fcbeb461904e" />
+
+
